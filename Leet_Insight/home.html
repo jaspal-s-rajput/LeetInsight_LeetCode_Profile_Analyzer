@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leet-Insight</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="media/logo.png"/>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="mainContainer">
+            <header>
+                <img src="media/logo.png" alt="L"/>
+                <h1>LEET INSIGHT</h1>
+            </header>
+
+            <main>
+                <div class="searchArea">
+                    <form action="">
+                        <input id="searchBar" type="text" placeholder="ENTER USERNAME">
+                        <button id="submit">SUBMIT</button>
+                    </form>
+                </div>
+
+                <!-- MAIN DETAILS -->
+                <div class="mainData">
+                    <span id="scrollMore">Scroll for More</span>
+                    <!-- OVERVIEW [RANK + NAME] -->
+                    <div class="overview">
+                        <div class="rank card">
+                                <p class="label">RANK</p>
+                                <h1 id="rank"></h1>
+                        </div>
+                        <div class="name card">
+                                <p class="label">CODER NAME</p>
+                                <h1 id="coderNamee"></h1>
+                        </div>
+                        
+                    </div>
+
+                    <!-- [ACTIVEDAY + TOTAL QUE + MAX STREAK] -->
+                    <div class="base card">
+                        <div class="activeDay">
+                            <h1 id="totalActiveDay"></h1>
+                            <p class="label">TOTAL ACTIVE DAYS</p>
+                        </div>
+                        <div class="solved">
+                            <h1 id="totalSolved"></h1>
+                            <p class="label">SOLVED PROBLEMS</p>
+                        </div>
+                        <div class="streak">
+                            <h1 id="maxStreak"></h1>
+                            <p class="label">MAX STREAK</p>
+                        </div>
+                    </div>
+
+                    <!-- TOTAL CARD -->
+                    <div class="total card">
+                        <p class="label" style="text-align: left; font-size: 1rem;">TOTAL</p>
+                        <p class="label" style="text-align: right;" id="totalDivSolved"></p>
+
+                        <div class="progressBar">
+                            <div class="progress-fill"></div>
+                        </div>
+
+                        <div class="totalCard">
+                            <div class="deepCard">
+                                <h1 id="accpetanceRate"></h1>
+                                <p class="label">ACCEPTANCE RATE</p>
+                            </div>
+                            <div class="deepCard">
+                                <h1 id="solvedPercentage"></h1>
+                                <p class="label">SOLVED PERCENTAGE</p>
+                            </div>
+                            <div class="deepCard">
+                                <h1 id="totalSubmission"></h1>
+                                <p class="label">TOTAL SUBMISSION</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EASY MED HARD BLOCK-->
+                    <div class="easyMedHard">
+                        <div class="easy card">
+                            <p class="emhLabel el">EASY</p>
+
+                            <div class="pie ePie"></div>
+
+                            <p id="easySolvedPercent" class="emhPercent"></p>
+                            <div class="emh">
+                                <div class="deepCard">
+                                    <h1 id="easySolved"></h1>
+                                </div>
+                                <div class="deepCard">
+                                    <h1 id="easyBeats"></h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="med card">
+                            <p class="emhLabel ml">MEDIUM</p>
+
+                            <div class="pie mPie"></div>
+
+                            <p id="medSolvedPercent" class="emhPercent"></p>
+                            <div class="emh">
+                                <div class="deepCard">
+                                    <h1 id="medSolved"></h1>
+                                </div>
+                                <div class="deepCard">
+                                    <h1 id="medBeats"></h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hard card">
+                            <p class="emhLabel hl">HARD</p>
+
+                            <div class="pie hPie"></div>
+
+                            <p id="hardSolvedPercent" class="emhPercent"></p>
+                            <div class="emh">
+                                <div class="deepCard">
+                                    <h1 id="hardSolved"></h1>
+                                </div>
+                                <div class="deepCard">
+                                    <h1 id="hardBeats"></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#searchBar" id="scrollMore">Back to Top</a>
+                </div>
+                <!-- MAIN DETAILS -->
+
+            </main>
+
+            <footer >
+                &copy; <span id="yearFoot"></span> LEET INSIGHT. ALL RIGHT RESERVED
+            </footer>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
