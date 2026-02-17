@@ -120,7 +120,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 redirect: "follow"
             }
 
-            const response = await fetch(proxyServer+targetUrl, requestOption);
+            //const response = await fetch(proxyServer+targetUrl, requestOption);
+            const response = await ffetch("/leetcode", requestOption);
 
             if(!response.ok){
                 // throw new Error ("No User Found");
