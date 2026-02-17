@@ -13,7 +13,7 @@ app.use(express.static(process.cwd()));
 
 // ✅ root route — THIS fixes your error
 app.get("/", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "index.html"));
+  res.sendFile(path.join(process.cwd(), "home.html"));
 });
 
 // proxy route
