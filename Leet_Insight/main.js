@@ -135,13 +135,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
             
         } 
         catch(error) {
-            mainDataBlock.innerHTML = `<p>NO DATA FOUND</p>`;
+            mainDataBlock.innerHTML = `<p style="color: rgb(216, 82, 4); text-shadow: 0px 0px 15px black, 0px 0px 10px rgba(128, 128, 128, 0.6); padding-bottom: 10px; font-weight: 800">|| USER NOT FOUND ||</p>`;
+            setTimeout(()=>{location.reload()}, 1000);
         }
         finally{
             usernameInput.disabled = false;
             searchButton.textContent = "Search";
             searchButton.disabled = false;
-            
         }
     }
 
