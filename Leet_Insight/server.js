@@ -1,16 +1,22 @@
 import express from "express";
 import fetch from "node-fetch";
 import cors from "cors";
+import path from "path";
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-// serve your html/css/js files
-app.use(express.static("."));
+// serve static files
+app.use(express.static(process.cwd()));
 
-// proxy endpoint
+// ✅ root route — THIS fixes your error
+app.get("/", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "index.html"));
+});
+
+// proxy route
 app.post("/leetcode", async (req, res) => {
   try {
     const response = await fetch("https://leetcode.com/graphql/", {
@@ -19,12 +25,10 @@ app.post("/leetcode", async (req, res) => {
       body: JSON.stringify(req.body)
     });
 
-    const data = await response.json();
-    res.json(data);
-  } catch (e) {
+    res.json(await response.json());
+  } catch {
     res.status(500).json({ error: "Fetch failed" });
   }
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log("Running on", PORT));
+app.listen(process.env.PORT || 3000);
