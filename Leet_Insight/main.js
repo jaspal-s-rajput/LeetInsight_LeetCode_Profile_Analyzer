@@ -228,6 +228,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     /* MAIN METHOD */
     searchButton.addEventListener('click', ()=>{
+        
         const username = usernameInput.value;
         console.log("Logging Username: ",username);
 
